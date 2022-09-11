@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SidebarService } from './shared/sidebar/sidebar.service';
 
 @Component({
   selector: 'todo-app-root',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-app';
+
+  constructor(readonly sidebarService: SidebarService) {}
 }
