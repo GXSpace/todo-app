@@ -5,7 +5,8 @@
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
-    "start": "nx serve",
+    "start-with-network": "nx serve --host 0.0.0.0",
+    "start": "echo '[NOTE]: Development Server restricted to localhost. Use yarn run start-with-network to open to the network \n' && nx serve",
     "build": "nx build",
     "test": "nx test"
   },
